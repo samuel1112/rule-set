@@ -116,7 +116,8 @@ fs.readFile(path.resolve(__dirname, filePath), {encoding: 'utf-8'}, (e, data)=>{
     });
     doC(null);
 
-    result = header+'\n'+proxy+'\n\n'+direct+'\n\n'+'\nFINAL,PROXY';
+    result = header+'\n'+proxy+'\n\n'+direct+'\n\n'
+    +'\nDOMAIN-SUFFIX,cn,DIRECT\nDOMAIN-KEYWORD,geosite:cn,DIRECT\nGEOIP,CN,DIRECT\nFINAL,PROXY';
 
 
     fs.writeFile(path.resolve(__dirname, filePath, '..', 'kitsunebi.conf'), result, (e)=>{
