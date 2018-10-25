@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "g": "node processor.js base.conf"
+  },
   "dependencies": {
     "lodash": "^4.17.11"
   }
